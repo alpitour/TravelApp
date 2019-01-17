@@ -11,5 +11,5 @@ Requirements:
 Setup:
 ```
 cd TravelApp\src\Web\TravelApp.WebSPA\ClientApp
-npm iinstall
+npm install
 ```
