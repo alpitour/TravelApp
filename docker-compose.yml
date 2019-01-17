@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  travelapp.webspa:
+    image: ${DOCKER_REGISTRY-}travelappwebspa
+    build:
+      context: .
+      dockerfile: src/Web/TravelApp.WebSPA/Dockerfile
