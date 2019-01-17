@@ -4,6 +4,7 @@ EXPOSE 80
 EXPOSE 443
 
 FROM microsoft/dotnet:2.1-sdk AS build
+
 WORKDIR /src
 COPY src/Web/TravelApp.WebSPA/TravelApp.WebSPA.csproj src/Web/TravelApp.WebSPA/
 RUN dotnet restore src/Web/TravelApp.WebSPA/TravelApp.WebSPA.csproj
