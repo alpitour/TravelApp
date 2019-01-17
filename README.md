@@ -1,11 +1,11 @@
 # TravelApp
 
 Requirements:
--VS 2017
--VS Code (o simili)
--npm
--Angular CLI
--Docker
+- VS 2017
+- VS Code (o simili)
+- npm
+- Angular CLI
+- Docker
 
 
 Setup:
