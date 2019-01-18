@@ -5,7 +5,6 @@ Requirements:
 - VS Code (o simili)
 - npm
 - Angular CLI
-- Docker
 
 
 Setup:
