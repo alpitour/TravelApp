@@ -130,11 +130,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var _layout_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layout/header/header.component */ "./src/app/layout/header/header.component.ts");
-/* harmony import */ var _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layout/footer/footer.component */ "./src/app/layout/footer/footer.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
+/* harmony import */ var _layout_header_header_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layout/header/header.component */ "./src/app/layout/header/header.component.ts");
+/* harmony import */ var _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./layout/footer/footer.component */ "./src/app/layout/footer/footer.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
 
 
 
@@ -149,17 +153,20 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_5__["HomePageComponent"],
-                _layout_header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
-                _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_6__["HomePageComponent"],
+                _layout_header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"],
+                _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_8__["FooterComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -291,7 +298,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Masthead -->\n<header class=\"masthead text-white text-center\"\nstyle=\"background-image: url('https://source.unsplash.com/collection/3106804/1900x1216');\">\n  <div class=\"overlay\"></div>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 mx-auto\">\n        <h1 class=\"mb-5\">Cerca la tua vacanza ideale</h1>\n      </div>\n      <div class=\"col-md-10 col-lg-8 col-xl-7 mx-auto\">\n        <form>\n          <div class=\"form-row\">\n            <div class=\"col-12 col-md-9 mb-2 mb-md-0\">\n              <input type=\"text\" class=\"form-control form-control-lg\" placeholder=\"\">\n            </div>\n            <div class=\"col-12 col-md-3\">\n              <button class=\"btn btn-block btn-lg btn-primary\">Cerca</button>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</header>\n\n<section class=\"search-results\">\n  <div class=\"container p-0\">\n    <!-- TODO -->\n  </div>\n</section>\n\n<!-- Image Showcases -->\n<section class=\"showcase\">\n  <div class=\"container-fluid p-0\">\n    <div class=\"row no-gutters\">\n\n      <div class=\"col-lg-6 order-lg-2 text-white showcase-img\" style=\"background-image: url('https://source.unsplash.com/collection/3106804/900x640');\"></div>\n      <div class=\"col-lg-6 order-lg-1 my-auto showcase-text\">\n        <h2>Prendi un respiro</h2>\n        <p class=\"lead mb-0\">E sparisci dalla circolazione</p>\n      </div>\n    </div>\n    <div class=\"row no-gutters\">\n      <div class=\"col-lg-6 text-white showcase-img\" style=\"background-image: url('https://source.unsplash.com/collection/3106804/900x641');\"></div>\n      <div class=\"col-lg-6 my-auto showcase-text\">\n        <h2>Parti</h2>\n        <p class=\"lead mb-0\">e vai pù lontano che puoi!</p>\n      </div>\n    </div>\n    <div class=\"row no-gutters\">\n      <div class=\"col-lg-6 order-lg-2 text-white showcase-img\" style=\"background-image: url('https://source.unsplash.com/collection/3106804/900x642');\"></div>\n      <div class=\"col-lg-6 order-lg-1 my-auto showcase-text\">\n        <h2>Verso paradisi lontani</h2>\n        <p class=\"lead mb-0\">Per scappare dal tuo inferno quotidiano</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Testimonials -->\n<section class=\"testimonials text-center bg-light\">\n  <div class=\"container\">\n    <h2 class=\"mb-5\">A tutto il resto ci pensiamo noi</h2>\n    <div class=\"row\">\n      <div class=\"col-lg-4\">\n        <div class=\"testimonial-item mx-auto mb-5 mb-lg-0\">\n          <img class=\"img-fluid rounded-circle mb-3\" src=\"https://source.unsplash.com/collection/3106804/500x500\" alt=\"\">\n          <h5>Tanto cibo</h5>\n          <p class=\"font-weight-light mb-0\">sino a star male</p>\n        </div>\n      </div>\n      <div class=\"col-lg-4\">\n        <div class=\"testimonial-item mx-auto mb-5 mb-lg-0\">\n          <img class=\"img-fluid rounded-circle mb-3\" src=\"https://source.unsplash.com/collection/3106804/499x499\" alt=\"\">\n          <h5>Feste in spiaggia</h5>\n          <p class=\"font-weight-light mb-0\">anche quando non hai voglia</p>\n        </div>\n      </div>\n      <div class=\"col-lg-4\">\n        <div class=\"testimonial-item mx-auto mb-5 mb-lg-0\">\n          <img class=\"img-fluid rounded-circle mb-3\" src=\"https://source.unsplash.com/collection/3106804/498x498\" alt=\"\">\n          <h5>E poi</h5>\n          <p class=\"font-weight-light mb-0\">ti riportiamo a casa</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<!-- Masthead -->\n<header class=\"masthead text-white text-center\"\nstyle=\"background-image: url('https://source.unsplash.com/collection/3106804/1900x1216');\">\n  <div class=\"overlay\"></div>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 mx-auto\">\n        <h1 class=\"mb-5\">Cerca la tua vacanza ideale</h1>\n      </div>\n      <div class=\"col-md-10 col-lg-8 col-xl-7 mx-auto\">\n        <form>\n          <div class=\"form-row\">\n            <div class=\"col-12 col-md-9 mb-2 mb-md-0\">\n              <input type=\"text\" class=\"form-control form-control-lg\" placeholder=\"\">\n            </div>\n            <div class=\"col-12 col-md-3\">\n              <button class=\"btn btn-block btn-lg btn-primary\">Cerca</button>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</header>\n\n<section class=\"search-results\">\n  <div class=\"container p-0\">\n    <!-- TODO -->\n  </div>\n</section>\n\n<!-- Image Showcases -->\n<section class=\"showcase\">\n  <div class=\"container-fluid p-0\">\n    <div class=\"row no-gutters\">\n\n      <div class=\"col-lg-6 order-lg-2 text-white showcase-img\" style=\"background-image: url('https://source.unsplash.com/collection/3106804/900x640');\"></div>\n      <div class=\"col-lg-6 order-lg-1 my-auto showcase-text\">\n        <h2>Prendi un respiro</h2>\n        <p class=\"lead mb-0\">E sparisci dalla circolazione</p>\n      </div>\n    </div>\n    <div class=\"row no-gutters\">\n      <div class=\"col-lg-6 text-white showcase-img\" style=\"background-image: url('https://source.unsplash.com/collection/3106804/900x641');\"></div>\n      <div class=\"col-lg-6 my-auto showcase-text\">\n        <h2>Parti</h2>\n        <p class=\"lead mb-0\">e vai pù lontano che puoi!</p>\n      </div>\n    </div>\n    <div class=\"row no-gutters\">\n      <div class=\"col-lg-6 order-lg-2 text-white showcase-img\" style=\"background-image: url('https://source.unsplash.com/collection/3106804/900x642');\"></div>\n      <div class=\"col-lg-6 order-lg-1 my-auto showcase-text\">\n        <h2>Verso paradisi lontani</h2>\n        <p class=\"lead mb-0\">Per scappare dal tuo inferno quotidiano</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Testimonials -->\n<section class=\"testimonials text-center bg-light\">\n  <div class=\"container\">\n    <h2 class=\"mb-5\">A tutto il resto ci pensiamo noi</h2>\n    <div class=\"row\">\n      <div class=\"col-lg-4\">\n        <div class=\"testimonial-item mx-auto mb-5 mb-lg-0\">\n          <img class=\"img-fluid rounded-circle mb-3\" src=\"https://source.unsplash.com/collection/3106804/500x500\" alt=\"\">\n          <h5>Tanto cibo</h5>\n          <p class=\"font-weight-light mb-0\">sino a star male</p>\n        </div>\n      </div>\n      <div class=\"col-lg-4\">\n        <div class=\"testimonial-item mx-auto mb-5 mb-lg-0\">\n          <img class=\"img-fluid rounded-circle mb-3\" src=\"https://source.unsplash.com/collection/3106804/499x499\" alt=\"\">\n          <h5>Feste in spiaggia</h5>\n          <p class=\"font-weight-light mb-0\">anche quando non hai voglia</p>\n        </div>\n      </div>\n      <div class=\"col-lg-4\">\n        <div class=\"testimonial-item mx-auto mb-5 mb-lg-0\">\n          <img class=\"img-fluid rounded-circle mb-3\" src=\"https://source.unsplash.com/collection/3106804/501x501\" alt=\"\">\n          <h5>E poi</h5>\n          <p class=\"font-weight-light mb-0\">ti riportiamo a casa</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -330,8 +337,7 @@ var HomePageComponent = /** @class */ (function () {
             selector: 'app-home-page',
             template: __webpack_require__(/*! ./home-page.component.html */ "./src/app/pages/home-page/home-page.component.html"),
             styles: [__webpack_require__(/*! ./home-page.component.scss */ "./src/app/pages/home-page/home-page.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        })
     ], HomePageComponent);
     return HomePageComponent;
 }());

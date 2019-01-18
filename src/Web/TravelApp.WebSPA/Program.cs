@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TravelApp.Services.SearchEngine.Infrastructure.Database;
 
 namespace TravelApp.WebSPA
 {
@@ -14,7 +16,14 @@ namespace TravelApp.WebSPA
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args)
+                .Build()
+                .MigrateDbContext<SearchEngineDbContext>((context, services) => 
+                {
+                    new SearchEngineDbContextSeed(context)
+                        .Seed("exportProdottiVgto.xml");
+                })
+                .Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

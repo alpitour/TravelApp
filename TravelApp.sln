@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.WebSPA", "src\Web
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FA9FEB6F-3F0D-4874-B15B-20DA2A29018F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SearchEngine", "SearchEngine", "{91EF4561-8FD2-4FCD-9565-C013643814C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.Services.SearchEngine", "src\Services\SearchEngine\TravelApp.Services.SearchEngine\TravelApp.Services.SearchEngine.csproj", "{2A50D637-9228-4434-98BB-0137563FF907}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{FA9FEB6F-3F0D-4874-B15B-20DA2A29018F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9FEB6F-3F0D-4874-B15B-20DA2A29018F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9FEB6F-3F0D-4874-B15B-20DA2A29018F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A50D637-9228-4434-98BB-0137563FF907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A50D637-9228-4434-98BB-0137563FF907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A50D637-9228-4434-98BB-0137563FF907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A50D637-9228-4434-98BB-0137563FF907}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +43,8 @@ Global
 		{951C64DA-3A8C-455C-829A-9066E78E8A87} = {1D1C99CE-7074-4C17-B1BE-F37E92151F56}
 		{1C87DBAC-3635-4CEC-B945-5B4E6469BDC5} = {1D1C99CE-7074-4C17-B1BE-F37E92151F56}
 		{7842FFD3-06CE-433B-83EE-64B610F12FE3} = {1C87DBAC-3635-4CEC-B945-5B4E6469BDC5}
+		{91EF4561-8FD2-4FCD-9565-C013643814C8} = {951C64DA-3A8C-455C-829A-9066E78E8A87}
+		{2A50D637-9228-4434-98BB-0137563FF907} = {91EF4561-8FD2-4FCD-9565-C013643814C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D0CA0D3-8C23-4D95-9974-5A658034CCBA}
