@@ -10,5 +10,8 @@ Requirements:
 Setup:
 ```
 cd TravelApp\src\Web\TravelApp.WebSPA\ClientApp
+
 npm install
+
+ng build --watch
 ```
