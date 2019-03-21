@@ -16,12 +16,6 @@ namespace TravelApp.Services.SearchEngine.Infrastructure.Database
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
-        }
-
-        public object Where()
-        {
-            throw new NotImplementedException();
         }
     }
 }
