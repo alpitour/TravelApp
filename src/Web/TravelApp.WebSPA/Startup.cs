@@ -24,7 +24,7 @@ namespace TravelApp.WebSPA
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<SearchEngineDbContext>(options => 
+            services.AddDbContext<SearchEngineDbContext>(options =>
             {
                 options.UseInMemoryDatabase("search-engine");
             });
@@ -72,6 +72,14 @@ namespace TravelApp.WebSPA
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+
+            app.UseCors(
+                builder => builder
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin()
+                    .AllowCredentials()
+                    );
 
             app.UseMvc(routes =>
             {
