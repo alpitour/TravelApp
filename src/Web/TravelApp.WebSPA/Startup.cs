@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
 using Swashbuckle.AspNetCore.Swagger;
 using TravelApp.Services.SearchEngine.Infrastructure.Database;
+using TravelApp.WebSPA.Infrastructure.Extensions;
 
 namespace TravelApp.WebSPA
 {
@@ -59,15 +60,10 @@ namespace TravelApp.WebSPA
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "TravelApp V1");
                 });
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
+            app.UseCustomExceptionHandler(env);
+
+            if (!env.IsDevelopment())
                 app.UseHsts();
-            }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
